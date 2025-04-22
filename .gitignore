@@ -1,0 +1,69 @@
+# .gitignore raiz do projeto
+##############################
+# OS e Editor                #
+##############################
+.DS_Store
+*.swp
+*.swo
+*.log
+.idea/
+.vscode/
+*.iml
+
+##############################
+# Backend (Rails)            #
+##############################
+backend/.bundle
+backend/log/*.log
+backend/tmp/
+backend/storage/
+backend/public/assets
+backend/.env
+backend/.env*.local
+backend/config/credentials/*.key
+backend/config/master.key
+backend/vendor/bundle/
+
+# Ignora arquivos de banco de dados SQLite (caso existam)
+backend/*.sqlite3
+backend/*.sqlite3-*
+
+##############################
+# Frontend (Next.js)         #
+##############################
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+frontend/.npm
+frontend/.cache
+frontend/.env
+frontend/.env*.local
+frontend/.env.development
+frontend/.env.production
+frontend/.env.test
+frontend/coverage/
+frontend/.jest/
+frontend/.swc
+frontend/.turbo
+frontend/.vercel
+
+##############################
+# Testes e Coverage          #
+##############################
+*/coverage/
+*/spec/examples.txt
+*/test/examples.txt
+*.lcov
+
+##############################
+# Docker                     #
+##############################
+.env
+docker-compose.override.yml
+
+##############################
+# Banco de dados             #
+##############################
+# Ignora volumes do Docker Compose (se aplicável)
+volumes/
+volume/
