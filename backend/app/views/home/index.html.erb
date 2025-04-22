@@ -1,0 +1,11 @@
+# app/views/home/index.html.erb
+<h1>Bem-vindo à Eightware</h1>
+<p>Sistema de autenticação JWT com Ruby on Rails e Next.js</p>
+
+<% if user_signed_in? %>
+  <p>Você está logado como: <%= current_user.email %></p>
+  <%= button_to "Logout", logout_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign Up", new_user_registration_path %> |
+  <%= link_to "Login", new_user_session_path %>
+<% end %>
